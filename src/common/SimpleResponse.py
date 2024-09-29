@@ -6,3 +6,10 @@ class SimpleResponse:
 
     def __str__(self):
         return f"Response(status_code={self.statusCode}, message='{self.message}', data={self.data})"
+    
+    def to_dict(self):
+        return {
+            "status_code": self.status_code,
+            "message": self.message,
+            "data": self.data
+        }
